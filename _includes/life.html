@@ -1,0 +1,64 @@
+{% assign l = site.data.life %}
+<section class="panel" id="panel-life" role="tabpanel" aria-labelledby="tab-life">
+  <div class="wrap">
+
+    <section class="block">
+      <h2 class="block__title">Hi, I'm Henryk! 👋☕</h2>
+      <div class="prose">
+        <p>I'm an independent developer who enjoys building useful tools, exploring new technologies, and turning ideas into real-world projects.</p>
+        <p>I develop and maintain my projects in my spare time, with a focus on creating practical, accessible, and open-source solutions. A lot of them start the same way: something in my own day is slow or annoying, so I write a tool to fix it, and if it works well I clean it up and share it.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Things I've built</h2>
+      <ol class="rows">
+        {% for pr in l.projects %}
+        <li class="row">
+          <span class="row__date">{{ pr.stack | join: ", " }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ pr.name }}</h3>
+            <p>{{ pr.summary }}</p>
+            {% if pr.links %}
+            <p class="row__links">{% for k in pr.links %}<a href="{{ k.url }}">{{ k.label }}</a>{% endfor %}</p>
+            {% elsif pr.note %}
+            <p class="row__meta">{{ pr.note }}</p>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Outside the lab</h2>
+      <ol class="rows">
+        {% for ac in l.activities %}
+        <li class="row">
+          <span class="row__date">{{ ac.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ ac.title }}</h3>
+            {% if ac.detail %}<p class="row__meta">{{ ac.detail }}</p>{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block coffee" aria-labelledby="coffee-title">
+      <svg class="coffee__cup" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path class="coffee__steam" d="M24 6c-3 4 3 6 0 10M32 4c-3 4 3 6 0 10M40 6c-3 4 3 6 0 10"/>
+        <path d="M12 24h36v14a14 14 0 0 1-14 14h-8a14 14 0 0 1-14-14z"/>
+        <path d="M48 28h3a7 7 0 0 1 0 14h-4"/>
+        <path d="M8 58h44"/>
+      </svg>
+      <div class="coffee__body">
+        <h2 class="coffee__title" id="coffee-title">Support my projects</h2>
+        <p>If you've found any of my projects helpful, consider buying me a coffee! ☕ Your support helps cover development costs, keeps projects running, and motivates me to continue building, improving, and sharing.</p>
+        <p>Every coffee is greatly appreciated. Thank you for your support! ❤️</p>
+        <a class="button" href="{{ site.data.profile.coffee_url }}" rel="noopener">Buy me a coffee</a>
+      </div>
+    </section>
+
+  </div>
+</section>

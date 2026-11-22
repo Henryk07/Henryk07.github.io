@@ -1,0 +1,23 @@
+# Everything on the Life & developer side of the page.
+
+projects:
+  - name: "Apple Store inventory monitor"
+    summary: "Watches iPhone stock at Apple Stores in the US, Canada and the UAE, and tells you the moment a model is back, through a Bark push, an alert sound, or a jump straight to your bag. A GPL-licensed fork that I maintain."
+    stack: [Rust]
+    links:
+      - { label: "Source", url: "https://github.com/Henryk07/apple-store-inventory-monitor" }
+      - { label: "Latest release", url: "https://github.com/Henryk07/apple-store-inventory-monitor/releases/latest" }
+  - name: "HomeOps"
+    summary: "One dashboard for my home lab in Cambridge. The router, NAS, hypervisor, VMs and CI runners sit on a single screen, with health checks run on the server so the browser never talks to the devices directly. Read-only by design."
+    stack: [Next.js, TypeScript, Tailwind CSS]
+    note: "Private for now"
+
+activities:
+  - date: "Sep 2024 – Sep 2025"
+    title: "Responder volunteer"
+    detail: "Hammersmith Hospital, Imperial College Healthcare NHS Trust. Supporting frontline staff and patients."
+  - date: "Oct 2022 – present"
+    title: "Volunteer editor, Chinese Wikipedia"
+  - date: "Imperial"
+    title: "Advanced Hackspace"
+    detail: "Building engineering tools and prototypes with an interdisciplinary team."

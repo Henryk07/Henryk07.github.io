@@ -1,0 +1,23 @@
+title: "Henryk Chan"
+description: "Henryk Chan (Haolin Chen), PhD student in Engineering at the University of Cambridge, working on wearable biosensors. Also an independent developer who builds small, practical tools."
+url: "https://cv.henrykchan.com"
+baseurl: ""
+lang: en
+
+# Where the Google Scholar crawler publishes citation data
+# (branch `google-scholar-stats` of this repo, written by .github/workflows/scholar.yml)
+repository: "Henryk07/Henryk07.github.io"
+
+google_site_verification: "1IIYHWBsQq4ufmy4N6Omkj5MpZp-636QkzmKNYeH5H4"
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - PROGRESS.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - google_scholar_crawler
+  - .bundle

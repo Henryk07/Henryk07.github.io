@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ site.lang }}" data-mode="academic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.data.profile.name }} ({{ site.data.profile.alt_name }})</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}/">
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.data.profile.name }} ({{ site.data.profile.alt_name }})">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}{{ site.data.profile.avatar }}">
+
+  <meta name="theme-color" content="#F5F7F8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F151B" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+  <!-- Set theme and mode before first paint so nothing flashes -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+      if (location.hash === '#life') d.setAttribute('data-mode', 'life');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,300..800;1,300..800&display=swap">
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.data.profile.name }}",
+    "alternateName": "{{ site.data.profile.alt_name }}",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}{{ site.data.profile.avatar }}",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Cambridge" },
+    "sameAs": [{% for l in site.data.profile.links.academic %}{% unless l.url contains 'mailto:' %}"{{ l.url }}",{% endunless %}{% endfor %}"https://github.com/Henryk07"]
+  }
+  </script>
+</head>
+<body>
+  {{ content }}
+  <script src="/assets/js/site.js" data-repo="{{ site.repository }}" defer></script>
+</body>
+</html>

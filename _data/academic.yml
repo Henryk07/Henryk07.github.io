@@ -1,0 +1,103 @@
+# Everything on the Academic side of the page.
+# Dates are plain strings so you can write them however you like.
+
+news:
+  - date: "Sep 2025"
+    text: "Started my PhD in the Department of Engineering at the University of Cambridge."
+  - date: "Nov 2024"
+    text: "Awarded the Department of Bioengineering Scholarship for MRes Students at Imperial College London, given to the top five students in the 2024–25 MRes cohort."
+
+# scholar_id: the part after "citation_for_view=" in a Google Scholar link.
+# It lets the page show a live citation count for that paper.
+publications:
+  - title: "Liquid Metal Functionalization Innovations in Wearables and Soft Robotics for Smart Healthcare Applications"
+    authors: "Shuwen Chen, Shicheng Fan, Henryk Chan, Zheng Qiao, Jiaming Qi, Zixiong Wu, Joo Chuan Yeo, Chwee Teck Lim"
+    venue: "Advanced Functional Materials"
+    year: 2024
+    url: "https://doi.org/10.1002/adfm.202309989"
+    scholar_id: "Yu9lHQgAAAAJ:YsMSGLbcyi4C"
+    citations: 84   # snapshot, updated weekly by .github/workflows/scholar.yml
+    image: "/images/papers/afm-2024-liquid-metal.jpg"
+  - title: "Spiral Large-Dimension Microfluidic Channel for Flow-Rate- and Particle-Size-Insensitive Focusing by the Stabilization and Acceleration of Secondary Flow"
+    authors: "Shaofei Shen, Lei Zhao, Hanjie Bai, Yali Zhang, Yanbing Niu, Chang Tian, Henryk Chan"
+    venue: "Analytical Chemistry"
+    year: 2024
+    url: "https://doi.org/10.1021/acs.analchem.3c04897"
+    scholar_id: "Yu9lHQgAAAAJ:eQOLeE2rZwMC"
+    citations: 19   # snapshot, updated weekly by .github/workflows/scholar.yml
+  - title: "A Novel Real-Time Arrhythmia Detection Model Using YOLOv8"
+    authors: "Guang Jun Nicholas Ang, Aritejh Kr Goil, Henryk Chan, Jieyi Jeric Lew, Xin Chun Lee, Raihan Bin Ahmad Mustaffa, Timotius Jason, Ze Ting Woon, Bingquan Shen"
+    note: "Co-first author"
+    venue: "arXiv preprint"
+    year: 2023
+    url: "https://arxiv.org/abs/2305.16727"
+    scholar_id: "Yu9lHQgAAAAJ:UebtZRa9Y70C"
+    citations: 29   # snapshot, updated weekly by .github/workflows/scholar.yml
+  - title: "High-Throughput Blood Plasma Extraction in a Dimension-Confined Double-Spiral Channel"
+    authors: "Shaofei Shen, Hanjie Bai, Xin Wang, Henryk Chan, Yanbing Niu, Weiwen Li, Chang Tian, Xiaoping Li"
+    venue: "Analytical Chemistry"
+    year: 2023
+    url: "https://doi.org/10.1021/acs.analchem.3c03002"
+    scholar_id: "Yu9lHQgAAAAJ:Y0pCki6q_DkC"
+    citations: 18   # snapshot, updated weekly by .github/workflows/scholar.yml
+  - title: "Flow-Rate-Insensitive Plasma Extraction by the Stabilization and Acceleration of Secondary Flow in the Ultralow Aspect Ratio Spiral Channel"
+    authors: "Shaofei Shen, Yali Zhang, Kai Yang, Henryk Chan, Weiwen Li, Xiaoping Li, Chang Tian, Yanbing Niu"
+    venue: "Analytical Chemistry"
+    year: 2023
+    url: "https://doi.org/10.1021/acs.analchem.3c04179"
+    scholar_id: "Yu9lHQgAAAAJ:W7OEmFMy1HYC"
+    citations: 13   # snapshot, updated weekly by .github/workflows/scholar.yml
+
+research:
+  - date: "Sep 2025 – present"
+    title: "Bioelectronics Laboratory"
+    place: "University of Cambridge"
+    role: "PhD researcher with Dr Amparo Güemes, Prof. George Malliaras and Prof. Róisín Owens"
+    logo: "/images/logos/cambridge.png"
+  - date: "Sep 2024 – Sep 2025"
+    title: "Neuromechanics and Rehabilitation Technology Group"
+    place: "Imperial College London"
+    role: "Research assistant and MRes researcher, supervised by Prof. Dario Farina"
+    logo: "/images/logos/imperial.svg"
+  - date: "Jun 2024 – Sep 2025"
+    title: "Güder Research Group"
+    place: "Imperial College London"
+    role: "Summer research intern, then postgraduate researcher, supervised by Prof. Firat Güder"
+    logo: "/images/logos/imperial.svg"
+  - date: "Oct 2023 – Jun 2024"
+    title: "Sheffield Biomedical Robotics Lab"
+    place: "University of Sheffield"
+    role: "Undergraduate researcher, supervised by Dr Dana Damian"
+    logo: "/images/logos/sheffield.png"
+  - date: "Oct 2022 – Aug 2023"
+    title: "MechanoBioEngineering Laboratory"
+    place: "National University of Singapore"
+    role: "Research intern, supervised by Prof. Chwee Teck Lim"
+    logo: "/images/logos/nus.svg"
+
+education:
+  - date: "2025 – 2030"
+    title: "University of Cambridge"
+    place: "PhD, Department of Engineering"
+    logo: "/images/logos/cambridge.png"
+  - date: "2024 – 2025"
+    title: "Imperial College London"
+    place: "MRes, Department of Bioengineering"
+    logo: "/images/logos/imperial.svg"
+  - date: "2020 – 2024"
+    title: "University of Sheffield"
+    place: "BEng, Department of Automatic Control and Systems Engineering"
+    logo: "/images/logos/sheffield.png"
+  - date: "2022 – 2023"
+    title: "National University of Singapore"
+    place: "Exchange year, College of Design and Engineering"
+    logo: "/images/logos/nus.svg"
+
+honours:
+  - date: "Nov 2024"
+    title: "Department of Bioengineering Scholarship for MRes Students"
+    detail: "Imperial College London. Top five of the 2024–25 MRes cohort."
+  - date: "Jan 2023"
+    title: "Patent granted: Key Switch Convenient to Maintenance"
+    detail: "CN218333573U, China National Intellectual Property Administration."
+    url: "https://patents.google.com/patent/CN218333573U/en"

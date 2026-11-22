@@ -1,0 +1,96 @@
+{% assign a = site.data.academic %}
+<section class="panel" id="panel-academic" role="tabpanel" aria-labelledby="tab-academic">
+  <div class="wrap">
+
+    <section class="block">
+      <h2 class="block__title">About</h2>
+      <div class="prose">
+        <p>Hello, I'm Henryk Chan (Haolin Chen), a PhD student in the Department of Engineering at the University of Cambridge. I'm a researcher and medical engineer, and I want the devices I build to make it out of the lab and into clinical use.</p>
+        <p>My research centres on wearable electrochemical biosensors, wound-monitoring biosensors, and ECG systems built with liquid metal. I've co-authored peer-reviewed papers in SCI Q1 journals, cited <a href="{{ site.data.profile.links.academic[1].url }}"><span data-citations data-snapshot="{{ site.data.profile.citations_fallback }}">{{ site.data.profile.citations_fallback }}</span> times</a> on Google Scholar, and I hold a granted patent for a device design.</p>
+        <p>Both my BEng and MRes are accredited by the Institution of Engineering and Technology (IET).</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">News</h2>
+      <ol class="rows">
+        {% for n in a.news %}
+        <li class="row">
+          <span class="row__date">{{ n.date }}</span>
+          <div class="row__body"><p>{{ n.text }}</p></div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Publications</h2>
+      <ol class="rows">
+        {% for pub in a.publications %}
+        <li class="row pub{% if pub.image %} pub--figure{% endif %}">
+          <span class="row__date">{{ pub.year }}</span>
+          <div class="row__body">
+            {% if pub.image %}<img class="pub__img" src="{{ pub.image }}" alt="" width="500" height="300" loading="lazy">{% endif %}
+            <h3 class="row__title"><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
+            <p class="pub__authors">{{ pub.authors | replace: "Henryk Chan", "<strong>Henryk Chan</strong>" }}{% if pub.note %}<span class="pub__note">{{ pub.note }}</span>{% endif %}</p>
+            <p class="pub__venue"><em>{{ pub.venue }}</em>{% if pub.scholar_id %}<span class="pub__cites" data-paper="{{ pub.scholar_id }}" data-snapshot="{{ pub.citations | default: 0 }}">{% if pub.citations %}, cited {{ pub.citations }} {% if pub.citations == 1 %}time{% else %}times{% endif %}{% endif %}</span>{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Research experience</h2>
+      <ol class="rows">
+        {% for r in a.research %}
+        <li class="row">
+          <span class="row__date">{{ r.date }}</span>
+          <div class="row__body row__body--logo">
+            <img class="logo" src="{{ r.logo }}" alt="" width="40" height="40" loading="lazy">
+            <div>
+              <h3 class="row__title">{{ r.title }}</h3>
+              <p>{{ r.place }}</p>
+              <p class="row__meta">{{ r.role }}</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Education</h2>
+      <ol class="rows">
+        {% for e in a.education %}
+        <li class="row">
+          <span class="row__date">{{ e.date }}</span>
+          <div class="row__body row__body--logo">
+            <img class="logo" src="{{ e.logo }}" alt="" width="40" height="40" loading="lazy">
+            <div>
+              <h3 class="row__title">{{ e.title }}</h3>
+              <p>{{ e.place }}</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Honours and patents</h2>
+      <ol class="rows">
+        {% for h in a.honours %}
+        <li class="row">
+          <span class="row__date">{{ h.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{% if h.url %}<a href="{{ h.url }}">{{ h.title }}</a>{% else %}{{ h.title }}{% endif %}</h3>
+            <p class="row__meta">{{ h.detail }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+  </div>
+</section>

@@ -1,0 +1,30 @@
+name: "Henryk Chan"
+alt_name: "Haolin Chen"
+post_nominals: "BEng MRes AMIMechE"
+location: "Cambridge, UK"
+avatar: "/images/avatar.jpg"
+
+# One line under the signal trace, per mode
+tagline:
+  academic: "PhD student in the Department of Engineering at the University of Cambridge, building wearable biosensors."
+  life: "Independent developer. I build small, practical tools in my spare time and share them."
+
+# Total citations snapshot, updated weekly by .github/workflows/scholar.yml.
+# The page also refreshes it live from the google-scholar-stats branch.
+citations_fallback: 163
+
+links:
+  academic:
+    - { label: "Email", url: "mailto:henrykchan.chl@gmail.com" }
+    - { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Yu9lHQgAAAAJ" }
+    - { label: "ORCID", url: "https://orcid.org/0000-0003-3310-5880" }
+    - { label: "ResearchGate", url: "https://www.researchgate.net/profile/Henryk-Chan-2" }
+    - { label: "Cambridge profile", url: "https://www.eng.cam.ac.uk/profiles/hc686" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/in/henrykchanchl" }
+  life:
+    - { label: "GitHub", url: "https://github.com/Henryk07" }
+    - { label: "Buy me a coffee", url: "https://buymeacoffee.com/henrykchan" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/in/henrykchanchl" }
+    - { label: "Email", url: "mailto:henrykchan.chl@gmail.com" }
+
+coffee_url: "https://buymeacoffee.com/henrykchan"
