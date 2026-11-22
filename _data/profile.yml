@@ -3,6 +3,7 @@ alt_name: "Haolin Chen"
 post_nominals: "BEng MRes AMIMechE"
 location: "Cambridge, UK"
 avatar: "/images/avatar.jpg"
+email: "henryk.chl@outlook.com"   # used by the "Email me" button; links below spell it out too
 
 # One line under the signal trace, per mode
 tagline:
@@ -15,7 +16,7 @@ citations_fallback: 163
 
 links:
   academic:
-    - { label: "Email", url: "mailto:henrykchan.chl@gmail.com" }
+    - { label: "Email", url: "mailto:henryk.chl@outlook.com" }
     - { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Yu9lHQgAAAAJ" }
     - { label: "ORCID", url: "https://orcid.org/0000-0003-3310-5880" }
     - { label: "ResearchGate", url: "https://www.researchgate.net/profile/Henryk-Chan-2" }
@@ -25,6 +26,6 @@ links:
     - { label: "GitHub", url: "https://github.com/Henryk07" }
     - { label: "Buy me a coffee", url: "https://buymeacoffee.com/henrykchan" }
     - { label: "LinkedIn", url: "https://www.linkedin.com/in/henrykchanchl" }
-    - { label: "Email", url: "mailto:henrykchan.chl@gmail.com" }
+    - { label: "Email", url: "mailto:henryk.chl@outlook.com" }
 
 coffee_url: "https://buymeacoffee.com/henrykchan"
