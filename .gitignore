@@ -6,3 +6,5 @@ vendor/
 Gemfile.lock
 .DS_Store
 google_scholar_crawler/results/
+.pytest_cache/
+__pycache__/

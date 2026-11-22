@@ -7,6 +7,8 @@ The page has two sides, switched with the control at the top:
 - **Academic**: about, news, publications, research, education, honours
 - **Life & developer**: projects, activities, and Buy me a coffee
 
+`/professional/` is a separate, recruiter-facing page (experience, skills, awards), linked from the top bar.
+
 ## Updating content
 
 Almost everything lives in `_data/`. Edit the YAML and push; you shouldn't need to touch HTML.
@@ -16,6 +18,7 @@ Almost everything lives in `_data/`. Edit the YAML and push; you shouldn't need 
 | `_data/profile.yml` | Name, taglines, links for each side, Buy me a coffee URL |
 | `_data/academic.yml` | News, publications, research, education, honours |
 | `_data/life.yml` | Projects and activities |
+| `_data/professional.yml` | Everything on `/professional/` |
 
 The two intro paragraphs are in `_includes/academic.html` and `_includes/life.html`.
 

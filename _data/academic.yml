@@ -2,6 +2,10 @@
 # Dates are plain strings so you can write them however you like.
 
 news:
+  - date: "Aug 2026"
+    text: "Joined Danaher in Shanghai as a Science & Technology intern, working on technology partnering in physical AI and laboratory automation."
+  - date: "Jul 2026"
+    text: "Received the ISFOE Young Researcher Award at ISFOE26, the International Symposium on Flexible Organic Electronics, part of NANOTEXNOLOGY26 in Thessaloniki, Greece."
   - date: "Sep 2025"
     text: "Started my PhD in the Department of Engineering at the University of Cambridge."
   - date: "Nov 2024"
@@ -50,9 +54,9 @@ publications:
 
 research:
   - date: "Sep 2025 – present"
-    title: "Bioelectronics Laboratory"
+    title: "Neuro-Metabolic Control Systems (NeuMeC) Lab"
     place: "University of Cambridge"
-    role: "PhD researcher with Dr Amparo Güemes, Prof. George Malliaras and Prof. Róisín Owens"
+    role: "PhD researcher supervised by Prof. Amparo Güemes González, in collaboration with Prof. George Malliaras's Bioelectronics Laboratory"
     logo: "/images/logos/cambridge.png"
   - date: "Sep 2024 – Sep 2025"
     title: "Neuromechanics and Rehabilitation Technology Group"
@@ -94,6 +98,9 @@ education:
     logo: "/images/logos/nus.svg"
 
 honours:
+  - date: "Jul 2026"
+    title: "ISFOE Young Researcher Award"
+    detail: "ISFOE26, International Symposium on Flexible Organic Electronics, NANOTEXNOLOGY26, Thessaloniki, Greece."
   - date: "Nov 2024"
     title: "Department of Bioengineering Scholarship for MRes Students"
     detail: "Imperial College London. Top five of the 2024–25 MRes cohort."

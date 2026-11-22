@@ -9,11 +9,12 @@
   var themeBtn = document.querySelector('.theme');
 
   function syncThemeLabel() {
+    if (!themeBtn) return;
     var dark = doc.getAttribute('data-theme') === 'dark';
     themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   }
 
-  themeBtn.addEventListener('click', function () {
+  if (themeBtn) themeBtn.addEventListener('click', function () {
     var next = doc.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     doc.setAttribute('data-theme', next);
     try { localStorage.setItem('theme', next); } catch (e) {}
@@ -23,13 +24,15 @@
 
   /* ---- Signal trace -------------------------------------------------------
      Academic: an ECG, one PQRST complex per beat, with slight beat-to-beat
-     variation. Life & developer: a square wave whose bits spell "henryk". */
+     variation. Life & developer: a square wave whose bits spell "henryk".
+     Professional: the ECG runs into the bitstream halfway across. */
   var svg = document.querySelector('.trace svg');
   var line = document.querySelector('.trace__line');
 
   function f(n) { return Math.round(n * 10) / 10; }
 
-  function ecgPath(w, h) {
+  function ecgPath(w, h, xEnd) {
+    if (xEnd == null) xEnd = w;
     var base = h * 0.6, amp = h * 0.42;
     var keys = [[0.26, 0], [0.285, 0.1], [0.315, -1], [0.345, 0.3], [0.375, 0]];
 
@@ -48,12 +51,12 @@
 
     var d = 'M0 ' + f(base);
     var x = -70, seed = 7, step = 1.5;
-    while (x < w) {
+    while (x < xEnd) {
       seed = (seed * 9301 + 49297) % 233280;
       var period = 250 * (0.96 + 0.08 * seed / 233280);
       for (var px = 0; px < period; px += step) {
         var X = x + px;
-        if (X < 0 || X > w) continue;
+        if (X < 0 || X > xEnd) continue;
         d += 'L' + f(X) + ' ' + f(base + amp * beat(px / period));
       }
       x += period;
@@ -61,15 +64,17 @@
     return d;
   }
 
-  function bitsPath(w, h) {
+  // Returns a path, or with xStart a continuation ("L…") to append to another path
+  function bitsPath(w, h, xStart) {
     var word = 'henryk ', bits = '';
     for (var i = 0; i < word.length; i++) {
       bits += ('0000000' + word.charCodeAt(i).toString(2)).slice(-8);
     }
     var bw = 20, hi = h * 0.3, lo = h * 0.7, edge = 2;
+    var x0 = xStart || 0;
     var y = bits[0] === '1' ? hi : lo;
-    var d = 'M0 ' + f(y);
-    for (var n = 0, x = 0; x < w; n++, x += bw) {
+    var d = (xStart ? 'L' : 'M') + f(x0) + ' ' + f(y);
+    for (var n = 0, x = x0; x < w; n++, x += bw) {
       var ny = bits[n % bits.length] === '1' ? hi : lo;
       if (ny !== y) { d += 'L' + f(x) + ' ' + f(y) + 'L' + f(x + edge) + ' ' + f(ny); y = ny; }
     }
@@ -80,8 +85,11 @@
     var box = svg.getBoundingClientRect();
     var w = Math.max(1, Math.round(box.width)), h = Math.max(1, Math.round(box.height));
     svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
-    var mode = doc.getAttribute('data-mode');
-    line.setAttribute('d', mode === 'life' ? bitsPath(w, h) : ecgPath(w, h));
+    var mode = doc.getAttribute('data-mode'), d;
+    if (mode === 'life') d = bitsPath(w, h);
+    else if (mode === 'pro') d = ecgPath(w, h, w * 0.5) + bitsPath(w, h, Math.round(w * 0.5));
+    else d = ecgPath(w, h);
+    line.setAttribute('d', d);
     if (animate && !reduceMotion.matches) {
       svg.classList.remove('is-drawing');
       void svg.getBoundingClientRect(); // restart the animation
@@ -93,6 +101,7 @@
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
+      if (!svg) return;
       if (Math.round(svg.getBoundingClientRect().width) !== lastWidth) drawTrace(false);
       lastWidth = Math.round(svg.getBoundingClientRect().width);
     }, 120);
@@ -117,7 +126,7 @@
     if (opts.updateHash && location.hash !== '#' + mode) {
       history.replaceState(null, '', '#' + mode);
     }
-    if (changed || opts.forceDraw) drawTrace(opts.animate !== false);
+    if (svg && (changed || opts.forceDraw)) drawTrace(opts.animate !== false);
   }
 
   tabs.forEach(function (tab, i) {
@@ -135,13 +144,18 @@
   });
 
   window.addEventListener('hashchange', function () {
+    if (!tabs.length) return;
     var m = location.hash.slice(1);
     if (MODES.indexOf(m) >= 0) setMode(m);
   });
 
-  var initial = location.hash.slice(1);
-  setMode(MODES.indexOf(initial) >= 0 ? initial : 'academic', { forceDraw: true });
-  lastWidth = Math.round(svg.getBoundingClientRect().width);
+  if (tabs.length) {
+    var initial = location.hash.slice(1);
+    setMode(MODES.indexOf(initial) >= 0 ? initial : 'academic', { forceDraw: true });
+  } else if (svg) {
+    drawTrace(true); // pages with a fixed mode, e.g. /professional/
+  }
+  if (svg) lastWidth = Math.round(svg.getBoundingClientRect().width);
 
   /* ---- Live Google Scholar citations ------------------------------------- */
   var repo = document.currentScript && document.currentScript.getAttribute('data-repo');
