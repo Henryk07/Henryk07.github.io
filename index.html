@@ -13,6 +13,7 @@ layout: default
         <span class="switch__thumb" aria-hidden="true"></span>
       </div>
     </nav>
+    <a class="bar__link" href="/professional/">Professional profile</a>
     <button class="theme" type="button" aria-label="Switch to dark theme">
       <svg class="theme__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="theme__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
@@ -29,20 +30,18 @@ layout: default
     <img class="hero__avatar" src="{{ p.avatar }}" alt="Portrait of {{ p.name }}" width="480" height="720">
   </div>
 
-  <div class="trace" aria-hidden="true">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" focusable="false">
-      <path class="trace__line" vector-effect="non-scaling-stroke" d=""/>
-    </svg>
-  </div>
+  {% include trace.html %}
 
   <div class="wrap hero__bottom">
     <p class="hero__tagline" data-for="academic">{{ p.tagline.academic }}</p>
     <p class="hero__tagline" data-for="life">{{ p.tagline.life }}</p>
     <ul class="links" data-for="academic">
       {% for l in p.links.academic %}<li><a href="{{ l.url }}"{% unless l.url contains 'mailto:' %} rel="me noopener"{% endunless %}>{{ l.label }}</a></li>{% endfor %}
+      <li class="links__pro"><a href="/professional/">Professional profile</a></li>
     </ul>
     <ul class="links" data-for="life">
       {% for l in p.links.life %}<li><a href="{{ l.url }}"{% unless l.url contains 'mailto:' %} rel="me noopener"{% endunless %}>{{ l.label }}</a></li>{% endfor %}
+      <li class="links__pro"><a href="/professional/">Professional profile</a></li>
     </ul>
   </div>
 </section>

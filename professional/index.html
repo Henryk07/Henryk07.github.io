@@ -1,0 +1,141 @@
+---
+layout: default
+mode: pro
+title: "Professional profile"
+description: "Henryk Chan (Haolin Chen): engineer and Cambridge PhD researcher in wearable bioelectronics, with industry experience in science and technology strategy at Danaher. Open to roles in S&T strategy, medtech R&D, consulting, and data and ML."
+---
+{% assign p = site.data.profile %}
+{% assign pro = site.data.professional %}
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar__inner">
+    <a class="bar__home" href="/">Homepage</a>
+    <button class="theme" type="button" aria-label="Switch to dark theme">
+      <svg class="theme__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="theme__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__top">
+    <div class="hero__id">
+      <h1 class="hero__name">{{ p.name }}</h1>
+      <p class="hero__alt">{{ p.alt_name }}<span class="hero__pn">{{ p.post_nominals }}</span></p>
+    </div>
+    <img class="hero__avatar" src="{{ p.avatar }}" alt="Portrait of {{ p.name }}" width="480" height="720">
+  </div>
+
+  {% include trace.html %}
+
+  <div class="wrap hero__bottom">
+    <p class="hero__tagline">{{ pro.headline }}</p>
+    <p class="hero__open">{{ pro.open_to }} Based in {{ p.location }}.</p>
+    <ul class="links">
+      {% for l in pro.contact %}<li><a href="{{ l.url }}"{% unless l.url contains 'mailto:' %} rel="me noopener"{% endunless %}>{{ l.label }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<main id="main" class="panel">
+  <div class="wrap">
+
+    <section class="block">
+      <h2 class="block__title">Highlights</h2>
+      <ul class="bullets bullets--lead">
+        {% for h in pro.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Experience</h2>
+      <ol class="rows">
+        {% for x in pro.experience %}
+        <li class="row">
+          <span class="row__date">{{ x.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ x.role }}</h3>
+            <p>{{ x.org }}<span class="row__place">{{ x.place }}</span></p>
+            <ul class="bullets">
+              {% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Skills</h2>
+      <dl class="skills">
+        {% for s in pro.skills %}
+        <div class="skills__row">
+          <dt>{{ s.group }}</dt>
+          <dd>{{ s.items }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Awards and patents</h2>
+      <ol class="rows">
+        {% for r in pro.recognition %}
+        <li class="row">
+          <span class="row__date">{{ r.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ r.title }}</h3>
+            <p class="row__meta">{{ r.detail }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="block__more">Publications and citations are listed on the <a href="/#academic">academic side of my homepage</a>.</p>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Leadership and volunteering</h2>
+      <ol class="rows">
+        {% for r in pro.leadership %}
+        <li class="row">
+          <span class="row__date">{{ r.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ r.title }}</h3>
+            <p class="row__meta">{{ r.detail }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block__title">Education</h2>
+      <ol class="rows">
+        {% for e in pro.education %}
+        <li class="row">
+          <span class="row__date">{{ e.date }}</span>
+          <div class="row__body">
+            <h3 class="row__title">{{ e.title }}</h3>
+            <p>{{ e.place }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block contact">
+      <h2 class="block__title">Get in touch</h2>
+      <p>The quickest way to reach me about a role is email. I'm happy to share a full CV.</p>
+      <a class="button" href="mailto:henryk.chl@outlook.com">Email me</a>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ p.name }}. {{ p.location }}.</p>
+    <p><a href="/">Homepage</a></p>
+  </div>
+</footer>

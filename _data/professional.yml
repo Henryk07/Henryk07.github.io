@@ -1,0 +1,124 @@
+# Content for /professional/ — the job-hunting page.
+# Wording is adapted from the professional variant of the LaTeX CV (Henryk-CV repo).
+
+headline: "Engineer and Cambridge PhD researcher in wearable bioelectronics, with industry experience in science and technology strategy at Danaher."
+open_to: "Open to roles in science and technology strategy, medtech R&D, consulting, and data and machine learning."
+
+contact:
+  - { label: "henryk.chl@outlook.com", url: "mailto:henryk.chl@outlook.com" }
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/henrykchanchl" }
+  - { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Yu9lHQgAAAAJ" }
+  - { label: "GitHub", url: "https://github.com/Henryk07" }
+
+highlights:
+  - "Screened 600+ robotics and life-science AI companies for Danaher and took the top 30 of each field through on-site due diligence. Both final top-3 partner recommendations were endorsed by the Chief Scientific Officer."
+  - "Five peer-reviewed papers and preprints in wearables, microfluidics and ECG analysis, one granted patent (CN and HK), and the ISFOE Young Researcher Award 2026."
+  - "Hands-on across the whole device stack: sensor fabrication and electrochemistry, embedded hardware, signal processing and machine learning."
+  - "Market sizing, competitor analysis and value-creation assessment for prosthetic control systems at Imperial College London."
+
+experience:
+  - date: "Aug 2026 – Sep 2026"
+    role: "Science & Technology Intern"
+    org: "Danaher Corporation"
+    place: "Shanghai, China"
+    points:
+      - "Supported Danaher's science and technology strategy in physical AI and laboratory automation by building the external partner landscape for robotic hardware and life-science AI agents."
+      - "Robotics hardware: mapped and profiled 500+ Chinese robotics companies across robotic arms and material-handling robots, screening for technical fit, maturity and laboratory-automation track record. Ran on-site visits and founder interviews with the top 30 and recommended the top 3, endorsed by the CSO."
+      - "Life-science AI agents: mapped 100+ companies, assessing domain depth, workflow fit and readiness to co-develop. Took the top 30 through technical due diligence and delivered a top-3 recommendation, also approved by the CSO."
+
+  - date: "Sep 2025 – present"
+    role: "PhD Researcher"
+    org: "University of Cambridge, NeuMeC Lab"
+    place: "Cambridge, UK"
+    points:
+      - "Developing a real-time wearable biosensing platform for lactate, glucose, sodium and potassium; leading sensor calibration, prototyping and signal processing."
+      - "Contributing to a soft multimodal neural probe for electrophysiology recording and glucose sensing in deep-brain regions, from characterisation to in-vivo validation."
+      - "Extending A-mode ultrasound arrays and embedded machine-learning models toward a fully wearable, multi-degree-of-freedom prosthetic control system."
+      - "Obtained the UK Personal Licence (PIL A, B and C) for regulated animal procedures within the first month of the PhD."
+
+  - date: "Oct 2025 – present"
+    role: "Undergraduate Supervisor and Teaching Assistant"
+    org: "University of Cambridge, Department of Engineering"
+    place: "Cambridge, UK"
+    points:
+      - "Small-group supervisions for second-year engineers from Jesus College and Lucy Cavendish College in Control Systems, Signal and Data Analysis, and Communication Systems."
+      - "Teaching assistant for first-year Engineering Computing practicals, helping students debug and structure their code."
+
+  - date: "Sep 2024 – Sep 2025"
+    role: "Research Assistant and MRes Researcher"
+    org: "Imperial College London, Neuromechanics and Rehabilitation Technology Group"
+    place: "London, UK"
+    points:
+      - "Worked on the Horizon 2020 SOMA project, building ultrasound-based human–machine interfaces for natural prosthetic control."
+      - "Designed and tested A-mode ultrasound sensing prototypes and contributed to muscle-state classification algorithms."
+      - "Carried out market sizing, competitor analysis and value-creation assessment for prosthetic control systems to inform a commercial path to wearable deployment."
+
+  - date: "Jun 2024 – Sep 2025"
+    role: "Research Intern, then Postgraduate Researcher"
+    org: "Imperial College London, Güder Research Group"
+    place: "London, UK"
+    points:
+      - "Co-wrote two literature reviews on wearable electrochemical biosensors and ingestible bioelectronics, screening 150+ papers to identify research gaps."
+      - "Worked on an embroidered textile sensor that tracks sweat pH and glucose during exercise."
+
+  - date: "Oct 2023 – Jun 2024"
+    role: "Undergraduate Researcher"
+    org: "University of Sheffield, Biomedical Robotics Lab"
+    place: "Sheffield, UK"
+    points:
+      - "Designed magnetically powered capsule-robot tools (biopsy needle, tweezers, scissors) and a control system to test them, and optimised wireless power transfer through receiver-coil design."
+
+  - date: "Oct 2022 – Aug 2023"
+    role: "Research Intern"
+    org: "National University of Singapore, MechanoBioEngineering Laboratory"
+    place: "Singapore"
+    points:
+      - "Built printable liquid-metal ECG electrodes and a wireless wound-monitoring biosensor for pH, temperature and bacteria."
+
+skills:
+  - group: "Strategy and analysis"
+    items: "Technology scouting, market mapping, due diligence, competitor analysis, market sizing, partner evaluation"
+  - group: "Engineering"
+    items: "Circuit design, microcontrollers, signal processing, image processing, machine learning, CAD (Fusion 360, AutoCAD), 3D printing, CNC machining, laser cutting"
+  - group: "Lab"
+    items: "Electrochemistry, microfluidics, cell culture, PCR, gel electrophoresis, SEM"
+  - group: "Programming and tools"
+    items: "Python, MATLAB and Simulink, C and C++, LabVIEW, Arduino, Git, LaTeX"
+  - group: "Languages"
+    items: "English, Mandarin, Cantonese"
+
+recognition:
+  - date: "Jul 2026"
+    title: "ISFOE Young Researcher Award"
+    detail: "ISFOE26, NANOTEXNOLOGY26, Thessaloniki, Greece."
+  - date: "Nov 2024"
+    title: "Department of Bioengineering Scholarship for MRes Students"
+    detail: "Imperial College London. Top five of the cohort."
+  - date: "Jan 2023"
+    title: "Patent: Key Switch Convenient to Maintenance"
+    detail: "Granted in mainland China (CN218333573U) and Hong Kong (HK30104729)."
+
+leadership:
+  - date: "2023 – 2024"
+    title: "Student Ambassador"
+    detail: "Department of Automatic Control and Systems Engineering, University of Sheffield."
+  - date: "2020 – 2024"
+    title: "Student–Staff Committee Representative"
+    detail: "University of Sheffield, all three undergraduate years. Gathered course feedback and negotiated improvements with staff."
+  - date: "2024 – 2025"
+    title: "Responder volunteer"
+    detail: "Hammersmith Hospital, Imperial College Healthcare NHS Trust."
+
+education:
+  - date: "2025 – 2030"
+    title: "PhD, Engineering"
+    place: "University of Cambridge"
+  - date: "2024 – 2025"
+    title: "MRes, Bioengineering"
+    place: "Imperial College London"
+  - date: "2020 – 2024"
+    title: "BEng, Automatic Control and Systems Engineering"
+    place: "University of Sheffield"
+  - date: "2022 – 2023"
+    title: "Exchange year, College of Design and Engineering"
+    place: "National University of Singapore"
