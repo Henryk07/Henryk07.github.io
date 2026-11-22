@@ -17,7 +17,9 @@
 
 - [x] `/professional/` with highlights, experience (Danaher, Cambridge, Imperial, teaching), skills, awards, leadership, education
 - [x] Blended ECG-to-bitstream trace, linked from the homepage bar
-- [ ] Review on device, then PR and merge
+- [x] One contact email everywhere: henryk.chl@outlook.com
+- [x] CI on every PR and push to main: GitHub Pages build, pytest (data, links, images, email, snapshot script), JS syntax, actionlint
+- [ ] Review on device, then merge PR #1
 - [ ] Make the Scholar crawler reliable (Google blocks GitHub Actions IPs)
 - [x] Review the design in a browser and on a phone
 - [x] Rename the old repo to `henryk07.github.io-legacy`
